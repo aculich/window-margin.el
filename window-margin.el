@@ -65,13 +65,6 @@ Set this to nil if you don't want a modeline indicator."
   :group 'window-margin
   :type '(choice string (const :tag "None" nil)))
 
-(defun window-margin-calculate-minimum-width (&optional width)
-  (cond ((numberp width) width)
-        ((not (null width))
-         (or fill-column (default-value 'window-min-width)))
-        (t (or (default-value 'window-min-width)
-               window-safe-min-width))))
-
 ;;;###autoload
 (define-minor-mode window-margin-mode
   "Restrict visual width of window using margins for `visual-line-mode'.
