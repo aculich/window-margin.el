@@ -35,7 +35,7 @@ To enable it with text-mode use:
 
 This minor mode was inspired by reading an entry on StackOverflow
 
-  http://stackoverflow.com/questions/14009223/set-column-width-for-visual-lines-in-emacs
+  http://stackoverflow.com/q/14009223/462302
 
 when I discovered that (the quirky, but useful) longlines-mode was
 being discontinued. I can't claim that this mode will be any less
