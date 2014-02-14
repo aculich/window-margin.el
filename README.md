@@ -1,4 +1,6 @@
-window-margin.el --- automatic margins for visual-line-mode wrapping
+# window-margin.el
+
+Automatic margins for visual-line-mode wrapping
 
 Copyright (C) 2012 by Aaron Culich
 
