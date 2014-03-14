@@ -31,7 +31,7 @@
 ;;
 ;; To enable it with text-mode use:
 ;;
-;;   (add-hook 'text-mode 'turn-on-window-margin-mode)
+;;   (add-hook 'text-mode-hook 'turn-on-window-margin-mode)
 ;;
 ;; This minor mode was inspired by reading an entry on StackOverflow
 ;;
