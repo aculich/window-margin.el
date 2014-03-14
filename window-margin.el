@@ -59,7 +59,7 @@ percentage of the frame width.")
 (make-local-variable 'window-margin-width)
 (setq-default window-margin-width nil)
 
-(defcustom window-margin-mode-line-string " wm"
+(defcustom window-margin-mode-line-string " Margin"
   "String displayed on the modeline when window-margin is active.
 Set this to nil if you don't want a modeline indicator."
   :group 'window-margin
