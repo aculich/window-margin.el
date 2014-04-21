@@ -20,7 +20,7 @@ To enable it with text-mode use:
 (add-hook 'text-mode 'turn-on-window-margin-mode)
 ```
 
-This minor mode was inspired by reading [an entry on StackOverflow](http://stackoverflow.com/q/14009223/462302). I discovered that (the quirky, but useful) `longlines-mode` was being discontinued. I can't claim that this mode will be any less quirky (probably more so at this early 0.1 release), but it makes use of margins and visual-line mode, which is a better way to accomplish the effect than `longlines-mode`.
+This minor mode was inspired by reading [an entry on StackOverflow](http://stackoverflow.com/q/14009223/462302). I discovered that (the quirky, but useful) `longlines-mode` was being discontinued. I can't claim that this mode will be any less quirky (probably more so at this early 0.1 release), but it makes use of margins and `visual-line-mode`, which is a better way to accomplish the effect than `longlines-mode`.
 
 ## License
 
