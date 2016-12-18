@@ -8,7 +8,7 @@
 ;; URL: http://github.com/aculich/window-margin.el
 ;; Description: automatic margins for visual-line-mode wrapping
 
-;; This file is part of GNU Emacs.
+;; This file is not part of GNU Emacs.
 
 ;; GNU Emacs is free software: you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -49,13 +49,14 @@
 (defgroup window-margin nil
   "Restrict visual width of window using margins for `visual-line-mode'."
   :group 'visual-line
-  :version "24.1.1")
+  :version "24.2.0")
 
 (defvar window-margin-width nil
   "Restrict visual width of window using margins for `visual-line-mode'.
-If non-nil use value of `fill-column', otherwise if an integer
-will be a fixed value, or if a floating point number then a
-percentage of the frame width.")
+If non-nil use value of `fill-column'; if an integer, that number of
+columns; if a positive floating-point number, that percentage of the
+frame width; if a negative floating-point number, that number negated
+and multiplied by `fill-column' (useful for variable-pitch fonts).")
 (make-local-variable 'window-margin-width)
 (setq-default window-margin-width nil)
 
@@ -107,7 +108,8 @@ will also be turned on for the selected buffer).
           (cond ((integerp window-margin-width)
                  window-margin-width)
                 ((floatp window-margin-width)
-                 window-margin-width)
+                 (if (< 0 window-margin-width) window-margin-width
+                   (floor (* (or fill-column 80) (- window-margin-width)))))
                 ((and window-margin-width)
                  (or fill-column nil))
                 (t 80))))

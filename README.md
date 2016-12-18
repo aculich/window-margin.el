@@ -12,7 +12,7 @@
 
 ## Commentary
 
-This minor mode will automatically resize windows to the width of the fill-column, or optionally to some fixed size set with the window-margin-width variable.
+This minor mode will automatically resize windows to the width of the fill-column, or optionally to some fixed size set with the `window-margin-width` variable.
 
 To enable it with text-mode use:
 
@@ -20,14 +20,14 @@ To enable it with text-mode use:
 (add-hook 'text-mode 'turn-on-window-margin-mode)
 ```
 
-This minor mode was inspired by reading [an entry on StackOverflow](http://stackoverflow.com/q/14009223/462302). I discovered that (the quirky, but useful) longlines-mode was being discontinued. I can't claim that this mode will be any less quirky (probably moreso at this early 0.1 release), but it makes use of margins and visual-line mode which is better way to accomplish the effect than implemented by longlines-mode
+This minor mode was inspired by reading [an entry on StackOverflow](http://stackoverflow.com/q/14009223/462302). I discovered that (the quirky, but useful) `longlines-mode` was being discontinued. I can't claim that this mode will be any less quirky (probably more so at this early 0.1 release), but it makes use of margins and `visual-line-mode`, which is a better way to accomplish the effect than `longlines-mode`.
 
 ## License
 
-Copyright 2012, Aaron Culich
+Copyright 2014, Aaron Culich
 
 ```
-This file is part of GNU Emacs.
+This file is not part of GNU Emacs.
 
 GNU Emacs is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
